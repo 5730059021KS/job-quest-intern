@@ -14,7 +14,8 @@ False
 ```
 Answer:
 ```
--- insert your answer here
+factors n = [x | x <- [1..n], n `mod` x == 0]
+is_prime n = factors n == [1, n]
 ```
 2. Please write a function that calculate nth number of fibonacci sequence. For example,
 ```
@@ -25,22 +26,29 @@ Answer:
 ```
 Answer:
 ```
--- insert your answer here
+fibo :: Int -> Integer
+fibo = (map fib[0..]!!)
+  where fib 0 = 0
+        fib 1 = 0
+        fib 2 = 1
+        fib n = fibo(n-2) + fibo(n-1)
 ```
 
 ## Questions
 Q1: What is GraphQL and how it is different from REST API?
 
-A1: <insert your answer here>
+A1: GraphQL Query is a string interpreted by a server that returns data in a specified format. GraphQL supports by any appication and REST API need to specify database before use.
 
 
 Q2: Please explain how javascript benefits from cross-platform development
 
-A2: <insert your answer here>
+A2: Java can run any platform by only download javascript. That means create on my computer can run in other computer.
+
 
 Q3: What do you expect to get from during an internship at TakeMeTour?
 
-A3: <insert your answer here>
+A3: cooperation with a team, responsibility in my work, real life working, experience
+
 
 ## Submitting
 
